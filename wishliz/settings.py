@@ -163,7 +163,7 @@ REST_AUTH_SERIALIZERS = {
 AUTH_USER_MODEL = 'api.CustomUser'
 
 """
-allath setting
+allauth setting
 """
 
 SITE_ID = 1
