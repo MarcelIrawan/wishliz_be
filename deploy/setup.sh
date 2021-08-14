@@ -9,7 +9,7 @@ PROJECT_BASE_PATH='/usr/local/apps/wishlist-api'
 
 echo "Installing dependencies..."
 apt-get update
-apt-get install -y python3-dev python3-venv sqlite python3-pip supervisor nginx git pipenv
+apt-get install -y pipenv
 
 # Create project directory
 mkdir -p $PROJECT_BASE_PATH
