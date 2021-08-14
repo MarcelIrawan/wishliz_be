@@ -16,6 +16,7 @@ mkdir -p $PROJECT_BASE_PATH
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
 cd $PROJECT_BASE_PATH
+pipenv --python /etc/python3.9
 pipenv install --deploy
 pipenv install uwsgi==2.0.18
 
