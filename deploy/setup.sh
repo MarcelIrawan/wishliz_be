@@ -16,21 +16,21 @@ mkdir -p $PROJECT_BASE_PATH
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
 cd $PROJECT_BASE_PATH
-pipenv --python /etc/python3.9
-pipenv install --deploy
-pipenv install uwsgi==2.0.18
+#pipenv --python /etc/python3.9
+#pipenv install --deploy
+#pipenv install uwsgi==2.0.18
 
 # Create virtual environment
-#mkdir -p $PROJECT_BASE_PATH/env
-#python3 -m venv $PROJECT_BASE_PATH/env
-#pipenv lock -r > $PROJECT_BASE_PATH/requirements.txt
+mkdir -p $PROJECT_BASE_PATH/env
+python3.9 -m venv $PROJECT_BASE_PATH/env
+pipenv lock -r > $PROJECT_BASE_PATH/requirements.txt
 
 # Install python packages
-#$PROJECT_BASE_PATH/env/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt
-#$PROJECT_BASE_PATH/env/bin/pip install uwsgi==2.0.18
+$PROJECT_BASE_PATH/env/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt
+$PROJECT_BASE_PATH/env/bin/pip install uwsgi==2.0.18
 
 # Run migrations and collectstatic
-#cd $PROJECT_BASE_PATH
+cd $PROJECT_BASE_PATH
 $PROJECT_BASE_PATH/env/bin/python manage.py migrate
 $PROJECT_BASE_PATH/env/bin/python manage.py collectstatic --noinput
 
