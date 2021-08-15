@@ -10,6 +10,7 @@ django-rest-auth = "*"
 django-allauth = "*"
 pillow = "*"
 wheel = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
