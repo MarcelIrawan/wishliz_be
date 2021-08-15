@@ -9,6 +9,7 @@ djangorestframework = "*"
 django-rest-auth = "*"
 django-allauth = "*"
 pillow = "*"
+wheel = "*"
 
 [dev-packages]
 
